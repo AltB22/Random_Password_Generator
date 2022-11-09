@@ -45,22 +45,23 @@ function generatePassword() {
     selectedCharType.push(specialChar)
     //console.log(selectedCharType)
   }
+  //if none of the above conditions are met the then alert to select at least one
   if (!includeNumber && !includeUpper && !includeLower && !includeSpecial) {
     alert("Please select at least one character type")
   }
 
   //Need to concat the strings selected into single string
   var masterArray = selectedCharType.join('').split('')
-  console.log(masterArray)
+  //console.log(masterArray)
 
   //Then create for loop to generate output
   var finalPassword = []
   for (let i = 0; i <= charCount; i++) {
     var output = masterArray[Math.floor(Math.random() * masterArray.length)]
-
+  //push each random selection from master array to the end of the output
     finalPassword.push(output)
   }
-
+  //returns final password array and joins it together into string
   return finalPassword.join('')
 }
 
