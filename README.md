@@ -6,7 +6,7 @@
 - The project solves for the issue of ensuring a random nature to employee passwords rather than human selected common words or phrases.
 - HTHL content was pre-existing (except for my linking of a reset.css file) and includes a button labeled "Generate Password" and a blank field to display the randomly generated output.(see screenshot)
 - The CSS styling was pre-existing.  This project included adding a reset.css file to the assets directory.
-- This project cosisted primarily of modification and elaboration of the JavaScript code to ensure that the application requires the user via a series of pronmpts and alerts to select a password length of between 8-128 characters, and to select at least one of the following character types: numbers, uppercase, lowercase, and special characters.
+- This project consisted primarily of modification and elaboration of the JavaScript code to ensure that the application requires the user via a series of pronmpts and alerts to select a password length of between 8-128 characters, and to select at least one of the following character types: numbers, uppercase, lowercase, and special characters.
 - Upon satisfaction of all the password criteria, the randomly generated password is displayed in the empty field inside the box.
 
 
