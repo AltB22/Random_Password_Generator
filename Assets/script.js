@@ -65,11 +65,6 @@ function generatePassword() {
   return finalPassword.join('')
 }
 
-  
-
-
-
-
 
 // Write password to the #password input
 function writePassword() {
