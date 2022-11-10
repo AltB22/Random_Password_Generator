@@ -12,7 +12,7 @@
 
 ## Screenshot of Deployed Application
 
-https://raw.githubusercontent.com//altb22.github.io/Random_Password_Generator/main/./assets/Password_Generator_Screenshot.png
+![The Password Generator application displays a red button to "Generate Password".](./Password_Generator_Screenshot.png)
 
 ## Installation & Usage
 
