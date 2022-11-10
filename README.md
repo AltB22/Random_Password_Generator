@@ -12,7 +12,7 @@
 
 ## Screenshot of Deployed Application
 
-![The Password Generator application displays a red button to "Generate Password".](./Password_Generator_Screenshot.png)
+![The Password Generator application displays a red button to "Generate Password".](./Assets/Password_Generator_Screenshot.png)
 
 ## Installation & Usage
 
