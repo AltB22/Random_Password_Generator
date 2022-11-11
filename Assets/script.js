@@ -8,27 +8,31 @@ var specialChar = "!@#$%^&*()"
 // console.log(upperCase.split(""))
 
 function generatePassword() {
-  
+  // var confirmMessage = confirm(charCountMin)
   var charCount = prompt("Please enter number of characters 8-128")
-
-  if (charCount < 8 || charCount > 128) {
-    alert("Invalid # of characters, please try again")
-    generatePassword()
-  }
 
   if (isNaN(charCount)) {
     alert("Please enter a valid number")
-    generatePassword()
+    return null;
   }
 
+  if (charCount < 8 || charCount > 128) {
+    alert("Invalid # of characters, please try again")
+    return null;
+  }
 
+  // console.log(charCount)
+
+//Variables below are confirm values for each confirm question to set parameters of the password
   var includeNumber = confirm("Include Numbers?");
   var includeUpper = confirm("Include Uppercase?");
   var includeLower = confirm("Include Lowercase?");
   var includeSpecial = confirm("Include Special Characters");
 
+//Variable below captures each type of selected character
   var selectedCharType = []
 
+//Series of if statements to push each string into an array of selected types of characters
   if (includeNumber) {
     selectedCharType.push(numVal)
     //console.log(selectedCharType)
@@ -45,21 +49,24 @@ function generatePassword() {
     selectedCharType.push(specialChar)
     //console.log(selectedCharType)
   }
-  //if none of the above conditions are met the then alert to select at least one
+  //if none of the above conditions are met the then alert to select at least one and return to beginning of function
   if (!includeNumber && !includeUpper && !includeLower && !includeSpecial) {
     alert("Please select at least one character type")
+    // generatePassword()
   }
 
-  //Need to concat the strings selected into single string
+  //This will concat the strings selected into single string and then split that into an array
   var masterArray = selectedCharType.join('').split('')
-  //console.log(masterArray)
+  // console.log(masterArray)
 
-  //Then create for loop to generate output
+  //Variable for final password set as undefined array.  Then create for loop to generate output variable for specified number of characters.
   var finalPassword = []
-  for (let i = 0; i <= charCount; i++) {
+  for (var i = 0; i < charCount; i++) {
     var output = masterArray[Math.floor(Math.random() * masterArray.length)]
-  //push each random selection from master array to the end of the output
+  //Push each random selection from master array to the end of the output
     finalPassword.push(output)
+    // console.log(finalPassword)
+    //console.log(output)
   }
   //returns final password array and joins it together into string
   return finalPassword.join('')
@@ -78,6 +85,4 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// while (charCount=null){
-//   generatePassword()
-// }
+
