@@ -8,7 +8,7 @@ var specialChar = "!@#$%^&*()"
 // console.log(upperCase.split(""))
 
 function generatePassword() {
-  // var confirmMessage = confirm(charCountMin)
+ 
   var charCount = prompt("Please enter number of characters 8-128")
 
   if (isNaN(charCount)) {
@@ -21,7 +21,7 @@ function generatePassword() {
     return null;
   }
 
-  // console.log(charCount)
+// console.log(charCount)
 
 //Variables below are confirm values for each confirm question to set parameters of the password
   var includeNumber = confirm("Include Numbers?");
@@ -52,7 +52,6 @@ function generatePassword() {
   //if none of the above conditions are met the then alert to select at least one and return to beginning of function
   if (!includeNumber && !includeUpper && !includeLower && !includeSpecial) {
     alert("Please select at least one character type")
-    // generatePassword()
   }
 
   //This will concat the strings selected into single string and then split that into an array
@@ -78,6 +77,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+//This was already provide but writes the generated password to the html id of password showing it the display.
   passwordText.value = password;
 
 }
